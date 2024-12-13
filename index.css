@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Prompt';
+  src: url('../fonts/Prompt-Bold.woff2') format('woff2'),
+      url('../fonts/Prompt-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Prompt';
+  src: url('../fonts/Prompt-Medium.woff2') format('woff2'),
+      url('../fonts/Prompt-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Prompt';
+  src: url('../fonts/Prompt-Regular.woff2') format('woff2'),
+      url('../fonts/Prompt-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body,
+html,
+body .inset {
+  height: 100%;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+body .inset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+body .inset .days-wrapper {
+  text-align: center;
+}
+
+body .inset>.wrapper {
+  border-radius: 1rem;
+  background-color: #DEDEDE;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 250px;
+  margin: 1rem;
+  gap: 1rem;
+
+}
+
+body .inset>.wrapper>div {
+  flex: 1;
+  font-size: 20px;
+}
+
+body .inset>.wrapper .img-wrapper img {
+  height: auto;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  width: calc(100% + 100px);
+  aspect-ratio: 1;
+}
+
+body .inset>.wrapper .img-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+body .inset>.wrapper .days-wrapper {
+  z-index: 1;
+}
+
+body .inset>.wrapper .days {
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: #FFF;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 1.1653rem + 3.7097vw, 4.875rem);
+  font-family: MONOSPACE;
+  width: 3ch;
+  height: auto;
+  line-height: 1;
+}
+body .inset>.wrapper .text {
+  font-family: 'Prompt';
+  font-size: clamp(1rem, 0.7097rem + 1.2903vw, 2rem);
+  line-height: 1.2;
+  color: gray;
+}
+
+@media(max-width: 719.5px) {
+  body .inset>.wrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+
+  body .inset>.wrapper {
+    max-width: 350px;
+  }
+
+  body .inset>.wrapper .img-wrapper img {
+    position: static;
+    max-width: 100%;
+  }
+}
